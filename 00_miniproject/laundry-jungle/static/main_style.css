@@ -1,0 +1,469 @@
+html {
+    font-size: 62.5%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    margin-top: 30px;
+    padding: 0;
+    background-color: #000000;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0;
+    /* justify-content: center; */
+    text-align: center;
+}
+
+.header {
+    color: #0bff85;
+    height: 5rem;
+    min-width: 340px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 700;
+    /* display:flex; */
+
+}
+
+.upper {
+    font-weight: 400;
+    font-size: 1.8rem;
+    margin-top: 8px;
+
+}
+
+
+.lgbtn {
+    font-size: 1.6rem;
+    font-weight: 500;
+    background-color: pink;
+    border-radius: 50%;
+}
+
+/***main.html***/
+.laundry-room {
+    display: flex;
+    width: 90%;
+    min-width: 340px;
+    margin: auto;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    font-size: 1.5rem;
+    /* padding-left: 8%; */
+    margin-top: 60px;
+    margin-bottom: -1%;
+    /* margin-left: 8.5%; */
+}
+
+.laundry-room>div {
+    width: 50%;
+    min-width: 160px;
+    min-height: 50px;
+    background-color: #442910ad;
+    color: white;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 3.2rem;
+    line-height: 170%;
+}
+
+.laundry-room>button {
+    width: 50%;
+    min-width: 160px;
+    min-height: 60px;
+    background-color: #2b6330;
+    color: white;
+    margin: 0 auto;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 3.2rem;
+    line-height: 170%;
+}
+
+.btn-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 50%;
+    min-width: 160px;
+    color: white;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.machine-container {
+    width: 90%;
+    min-width: 340px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.container-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 0;
+    row-gap: 20px;
+}
+
+.machine {
+    position: relative;
+}
+
+.machine-img:hover {
+    -webkit-filter: drop-shadow(4px 4px 4px #2b6330) drop-shadow(-4px -4px 4px #2b6330);
+    filter: drop-shadow(4px 4px 4px #2b6330) drop-shadow(-4px -4px 4px #2b6330);
+}
+
+/*열려 있는 세탁기 이미지*/
+.open-machine {
+    width: 100%;
+    min-width: 120px;
+}
+
+/*닫혀 있는 세탁기 이미지*/
+.closed-machine {
+
+    width: 100%;
+    min-width: 120px;
+}
+
+.machine-name {
+    position: absolute;
+    width: 30%;
+    min-width: 70px;
+    height: 15%;
+    min-height: 30px;
+    text-align: center;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -5%);
+    background-color: white;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1.8rem;
+    /* line-height: 180%; */
+    align-items: center;
+    /* border: solid 2px black; */
+}
+
+.washer {
+    /* border: solid 1px #00dcdc;
+    color: black; */
+    font-size: 1.5rem;
+    color: #00dcdc;
+}
+
+.dryer {
+    /* border: solid 1px #f5eb00;
+    color: black; */
+    font-size: 1.5rem;
+    color: #f5eb00;
+}
+
+
+
+/*내가 사용하는 세탁기/건조기*/
+.my-use {
+    -webkit-filter: drop-shadow(8px 8px 8px #ee2f78) drop-shadow(-8px -8px 8px #ee2f78);
+    filter: drop-shadow(8px 8px 8px #ee2f78) drop-shadow(-8px -8px 8px #ee2f78);
+}
+
+/*열려 있는 세탁기 위 텍스트*/
+.text-on-open-machine {
+    position: absolute;
+    width: 30%;
+    min-width: 90px;
+    line-height: 0.4rem;
+    height: 20%;
+    min-height: 40px;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #c7fccd;
+    /* border: 2px solid #6b6b6b; */
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px #a0f568;
+    font-weight: 500;
+    font-size: 1.8rem;
+    color: #012e07;
+}
+
+/*닫혀 있는 세탁기 위 텍스트*/
+.text-on-closed-machine {
+    position: absolute;
+    width: 30%;
+    min-width: 90px;
+    line-height: 0.5rem;
+    min-height: 40px;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffbdc2;
+    /* border: 2px solid #6b6b6b; */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #6b6b6b;
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: #87141e;
+}
+
+.transparent_button {
+    background-color: transparent;
+    border: none;
+}
+
+.modal_background {
+
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.modal_box {
+    width: 60vw;
+    min-width: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 10px;
+}
+
+.modal_box>h3 {
+    font-size: 2rem;
+    margin: 15px;
+    margin-top: 25px;
+}
+
+.modal_box>h5 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.modal_box>p {
+    font-size: 1.6rem;
+    margin: 5px auto;
+}
+
+#modal0 {
+    display: none;
+}
+
+#modal1 {
+    display: none;
+}
+
+#modal2 {
+    display: none;
+}
+
+#modal3 {
+    display: none;
+}
+
+.modal-btn-wrap {
+    margin: 0 auto;
+}
+
+.modal-btn-wrap-open {
+    display: flex;
+    justify-content: center;
+    /* grid-template-columns: 1fr 1fr; */
+    margin: 10px auto;
+    margin-bottom: 20px;
+
+}
+
+.modal-btn-wrap-close {
+    display: flex;
+    justify-content: center;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    margin: 10px auto;
+    margin-bottom: 20px;
+}
+
+.modal-btn-open {
+    width: 15vw;
+    height: 10vh;
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+    border: none;
+}
+
+.modal-btn-close {
+    width: 15vw;
+    height: 10vh;
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin: 5px;
+    text-align: center;
+    border-radius: 10px;
+    border: none;
+}
+
+.modal-btn-open:hover {
+    filter: brightness(85%);
+}
+
+.modal-btn-close:hover {
+    filter: brightness(85%);
+}
+
+/*예약 버튼*/
+.custom-button {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 80%;
+    min-width: 160px;
+    min-height: 90px;
+    font-size: 4rem;
+    font-weight: 500;
+    margin: 3px;
+    color: black;
+}
+
+/***signin.html***/
+.signin-wrapper {
+    justify-content: center;
+    text-align: center;
+}
+
+.form-wrapper>h2 {
+    font-size: 2.4rem;
+}
+
+.form-wrapper {
+    justify-content: center;
+    border: solid 2px #1ccb6e;
+    border-radius: 10px;
+    width: 40%;
+    min-width: 300px;
+    margin: 30px auto;
+    margin-bottom: 0;
+    padding: 20px;
+    padding-top: 0px;
+    /* background-color: #f0fff7; */
+}
+
+.input-wrapper {
+    vertical-align: middle;
+}
+
+#id-input {
+    font-size: 1.6rem;
+    width: 80%;
+    min-width: 100px;
+    height: 35px;
+    border: solid 1px #e3e3e3;
+    border-radius: 5px;
+}
+
+#pw-input {
+    font-size: 1.6rem;
+    width: 80%;
+    min-width: 100px;
+    height: 35px;
+    border: solid 1px #e3e3e3;
+    border-radius: 5px;
+
+}
+
+.signin-btn {
+    margin-top: 20px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    width: 12vw;
+    min-width: 100px;
+    height: 40px;
+    background-color: #1ccb6e;
+    border: transparent;
+    border-radius: 5px;
+    color: white;
+}
+
+.signup-wrapper {
+    width: 80vw;
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 0;
+    color: #f0f0f0;
+}
+
+.signup-btn {
+    border: transparent;
+    border-radius: 5px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    width: 12vw;
+    min-width: 100px;
+    height: 40px;
+}
+
+#signup-box {
+    float: right;
+    margin-right: 10%;
+
+}
+
+#signup-button {
+    width: 96px;
+    margin-top: 20px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    height: 40px;
+    background-color: #28a9e6;
+    border: transparent;
+    border-radius: 5px;
+    color: white;
+}
+
+#label-box {
+    font-size: 1.6rem;
+}
+
+.signup-wrapper {
+    width: 40%;
+}
+
+#singnup-input {
+    font-size: 1.6rem;
+    width: 60%;
+    min-width: 180px;
+    height: 35px;
+    border: solid 1px #e3e3e3;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    margin-left: 7px;
+}
