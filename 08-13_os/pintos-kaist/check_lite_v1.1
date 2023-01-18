@@ -1,0 +1,61 @@
+#!/bin/bash
+
+############################################################
+###                                                      ###
+###     0. place check.sh in pintos-kaist                ###
+###                                                      ###
+###     1. make check.sh executable(command below)       ###
+###        $ chmod +x check.sh                           ###
+###                                                      ###
+###     2. run check.sh(command below)                   ###
+###        $ ./check.sh                                  ###
+###                                                      ###
+###     3. input project number(1~4)                     ###
+###                                                      ###
+###     4. input test case number(depends on project)    ###
+###                                                      ###
+###     5. check test result!                            ###
+###                                                      ###
+###     project 3, 4 will be added soon                  ###
+###                                                      ###
+############################################################
+
+
+# all projects
+PRJ=( threads userprog vm filesys )
+
+### 0. init ###
+printf "\n\n"
+echo "########## make clean ##########"
+echo "    y(yes) : clean previous build"
+echo "    ANY KEY : use previous build"
+read CLN
+if [ "${CLN,,}" == "y" -o "${CLN,,}" == "yes" ]
+then
+    echo "########## clean previous build ##########"
+    make clean -s                                   # clean previous build
+else
+    echo "########## use previous build ########## "# use previous build
+fi
+
+### 1. make check or exit ###
+printf "\n\n"
+echo "Enter PROJECT NUMBER to check: "              # show project list
+echo "    1: THREADS"
+echo "    2: USER PROGRAMS"
+echo "    3: VIRTUAL MEMORY"
+echo "    4: FILE SYSTEM"
+echo "    0: exit"
+read PRJN                                           # get project number
+if [ $PRJN -eq 0 ]
+then
+    echo "########## bye ##########"                # exit
+    exit 0
+elif [ $PRJN -lt 1 -o $PRJN -gt 4 ]                 # check input error
+then
+    echo "ERROR: wrong project number!"
+    exit 1
+fi
+DIR=${PRJ[$PRJN-1]}
+echo "########## make check ##########"
+make -C $DIR check -s                               # make check

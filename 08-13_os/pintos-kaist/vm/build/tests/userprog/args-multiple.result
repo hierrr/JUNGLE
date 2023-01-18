@@ -1,0 +1,4 @@
+FAIL
+Kernel panic in run: PANIC at ../../userprog/process.c:79 in initd(): Fail to launch initd
+Call stack: 0x8004217ee0 0x800421b594 0x80042074dc
+Translation of call stack:
